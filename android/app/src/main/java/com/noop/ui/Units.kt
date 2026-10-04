@@ -135,7 +135,7 @@ enum class SleepChartStyle(val raw: String) {
     /** The stage-colour ramp this style draws with. */
     val stagePalette: SleepStagePalette
         get() = when (this) {
-            CLASSIC, FILLED -> SleepStagePalette.NOOP
+            CLASSIC, FILLED -> SleepStagePalette.Healer S.I.
             GARMIN_FILLED -> SleepStagePalette.GARMIN
             RIBBON -> SleepStagePalette.OURA
         }
@@ -146,7 +146,7 @@ enum class SleepChartStyle(val raw: String) {
 }
 
 /** Which stage-colour ramp a sleep chart draws with. Twin of the Swift `SleepStagePalette`. */
-enum class SleepStagePalette { NOOP, OURA, GARMIN }
+enum class SleepStagePalette { Healer S.I., OURA, GARMIN }
 
 /**
  * Reads the display preferences and resolves backwards-compatible fallbacks. SharedPreferences isn't

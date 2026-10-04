@@ -50,7 +50,7 @@ import kotlin.math.roundToInt
  * stage. Mirrors macOS SleepView.stageBreakdownRows. (PipBar)
  */
 @Composable
-internal fun StageBreakdownRows(s: Stages, palette: SleepStagePalette = SleepStagePalette.NOOP) {
+internal fun StageBreakdownRows(s: Stages, palette: SleepStagePalette = SleepStagePalette.Healer S.I.) {
     Column(verticalArrangement = Arrangement.spacedBy(Metrics.space12)) {
         StageBreakdownRow("Awake", s.awake, s.total, stageColorForRamp("Awake", palette), stageSharePercent("Awake", s))
         StageBreakdownRow("REM", s.rem, s.total, stageColorForRamp("REM", palette), stageSharePercent("REM", s))
@@ -218,7 +218,7 @@ internal fun FilledHypnogram(
     // RIBBON at each stage level (the WHOOP-style stepped line), which reads cleaner on a fragmented night.
     filled: Boolean = true,
     // The stage-colour ramp: NOOP tokens (Fill), Garmin's (Garmin Fill), or Oura's (Ribbon).
-    palette: SleepStagePalette = SleepStagePalette.NOOP,
+    palette: SleepStagePalette = SleepStagePalette.Healer S.I.,
 ) {
     if (segments.isEmpty()) return
     val originSec = (onsetTs?.toDouble()) ?: segments.minOf { it.start }.toDouble()
@@ -615,7 +615,7 @@ private val garminSleepLight: Color get() = brand(BrandSleepRamp.GARMIN_LIGHT_LI
 private val garminSleepDeep: Color get() = brand(BrandSleepRamp.GARMIN_DEEP_LIGHT, BrandSleepRamp.GARMIN_DEEP_DARK)
 
 private fun stageColorForRamp(name: String, palette: SleepStagePalette): Color = when (palette) {
-    SleepStagePalette.NOOP -> stageColorFor(name)
+    SleepStagePalette.Healer S.I. -> stageColorFor(name)
     SleepStagePalette.OURA -> when (canonicalStage(name)) {
         "deep" -> ouraSleepDeep; "rem" -> ouraSleepREM; "light" -> ouraSleepLight
         "awake" -> ouraSleepAwake; else -> ouraSleepLight
