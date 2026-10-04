@@ -104,3 +104,4 @@ Open it directly in a browser, or serve the folder: `python3 -m http.server 4550
 ## Coordination
 
 Work is issue-first. See [`CONTRIBUTING.md`](../CONTRIBUTING.md) for the claim, progress, and handoff rules.
+
