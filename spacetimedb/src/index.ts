@@ -3841,3 +3841,4 @@ export const renameFamily = spacetimedb.reducer(
 		ctx.db.family.id.update({ ...found, name });
 	},
 );
+// CI path-filter proof (do not merge).
