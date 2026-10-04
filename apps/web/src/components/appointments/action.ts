@@ -36,3 +36,4 @@ export function useAction(onDone: () => void) {
 export const fieldClass =
 	"win95-inset win95-field min-w-0 bg-card px-2 py-1 text-sm";
 export const buttonClass = "h-11 px-3 text-sm";
+// CI path-filter proof (do not merge).
